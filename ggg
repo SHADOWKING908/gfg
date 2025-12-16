@@ -1,0 +1,34 @@
+print("Кассовый аппарат")
+print("(Для завершения ввода введите 0)")
+
+total_sum = 0
+
+while True:
+    # Ввод цены товара
+    price_input = input("Введите цену товара (целое число, 0 для завершения): ")
+
+    # Преобразуем в число
+    price = int(price_input)
+
+    # Проверка на 0
+    if price == 0:
+        break
+
+    # Обработка отрицательного числа
+    if price < 0:
+        print("Ошибка цены")
+        continue  # Используем continue для пропуска
+
+    # Добавление цены к общей сумме
+    total_sum = total_sum + price
+
+print(f"Общая сумма покупок: {total_sum}")
+
+# Применение скидки
+if total_sum > 1000:
+    discount = total_sum * 10 // 100
+    final_sum = total_sum - discount
+    print(f"Сумма покупок больше 1000, применяется скидка 10%")
+    print(f"Итоговая сумма к оплате: {final_sum}")
+else:
+    print(f"Итоговая сумма к оплате: {total_sum}")
