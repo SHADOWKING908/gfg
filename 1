@@ -1,0 +1,14 @@
+print("Эмуляция электронного замка")
+
+
+PASSWORD = "4590"
+
+while True:
+
+    pin = input("Введите пин-код: ")
+
+    if pin == PASSWORD:
+        print("Доступ разрешен")
+        break
+    else:
+        print("Ошибка. Попробуйте еще раз")
