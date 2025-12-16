@@ -1,0 +1,27 @@
+print("Ввод строго возрастающей последовательности")
+
+first_num = None
+while True:
+    value = input("Введите первое число: ")
+    first_num = int(value)
+    break
+
+while True:
+    value = input("Введите второе число: ")
+    second_num = int(value)
+
+    if second_num > first_num:
+        break
+    else:
+        print("Ошибка. Второе число должно быть больше первого. Попробуйте еще раз.")
+
+while True:
+    value = input("Введите третье число: ")
+    third_num = int(value)
+
+    if third_num > second_num:
+        break
+    else:
+        print("Ошибка. Третье число должно быть больше второго. Попробуйте еще раз.")
+
+print("Последовательность принята")
