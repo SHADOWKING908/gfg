@@ -1,0 +1,24 @@
+print("Поиск максимального числа в последовательности")
+print("(Для завершения ввода введите 0)")
+
+max_number = None
+
+while True:
+
+    input_value = input("Введите натуральное число (0 для завершения): ")
+
+    number = int(input_value)
+
+    if number == 0:
+        break
+
+
+    if max_number is None:  # Если это первое число
+        max_number = number
+    elif number > max_number:  # Если нашли число больше текущего максимума
+        max_number = number
+
+if max_number is not None:
+    print(f"Самое большое введенное число: {max_number}")
+else:
+    print("Не было введено ни одного числа (кроме 0)")
